@@ -1,12 +1,101 @@
-﻿<html lang="en">
+﻿<!DOCTYPE html>
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Planificar 1.0</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/styles.css">
 </head>
 <body>
-    
 
+    <!-- Navbar se ebe a modificar a modular como el proyecto grupal-->
+    <nav class="navbar navbar-compania sticky-top">
+        <div class="container">
+            <a class="navbar-brand fs-4 fw-bolder" href="index.html">Planificador de tareas</a>
+        </div>
+    </nav>
 
+    <!-- Contenido dividido en 3 columnas -->
+    <main class="container mt-5 mb-5">
+        <div class="row g-4 align-items-center">
+
+            <!-- Columna 1: Texto -->
+            <div class="col-12 col-md-4">
+                <h1 class="display-6">Bienvenidos a tu aliado el planificador de tareas 1.0</h1>
+                <h2 class="h4">Ten la oportunidad de organizar, visualizar y completar tus tareas</h2>
+                <p class="lead">Puedes visualizar tus tareas de manera completa y estilizada</p>
+                <p>Anímate a construir tu disciplina con diseños agradables, versátiles, juega y adquiere un nivel más de cumplimiento de metas</p>
+            </div>
+
+            <!-- Columna 2: Imagen -->
+            <div class="col-12 col-md-4 text-center">
+                <img src="img/focus.jpg" class="img-fluid img-redondeada" alt="Focus">
+            </div>
+
+            <!-- Columna 3: Formulario (Sprint 1) -->
+            <div class="col-12 col-md-4">
+                <div class="card tarjeta-oscura shadow-sm">
+                    <div class="card-header fw-bold">Nueva tarea</div>
+                    <div class="card-body">
+
+                        <!-- la validación la hace JavaScript (script.js)-->
+                        <form id="formulario-tarea" novalidate>
+                            <div class="mb-3">
+                                <label for="nombre" class="form-label">Nombre</label>
+                                <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre de la tarea" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="asignado" class="form-label">Asignado a</label>
+                                <input type="text" class="form-control" id="asignado" name="asignado" placeholder="Responsable" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="descripcion" class="form-label">Descripción</label>
+                                <textarea class="form-control" id="descripcion" name="descripcion" rows="3" placeholder="Describe la tarea" required></textarea>
+                            </div>
+                            <div class="mb-3">
+                                <label for="fecha" class="form-label">Fecha de entrega</label>
+                                <input type="date" class="form-control" id="fecha" name="fecha" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="estado" class="form-label">Estado</label>
+                                <select id="estado" name="estado" class="form-select" required>
+                                    <option value="">Selecciona un estado</option>
+                                    <option value="POR HACER">POR HACER</option>
+                                    <option value="EN PROCESO">EN PROCESO</option>
+                                    <option value="REVISIÓN">REVISIÓN</option>
+                                    <option value="HECHO">HECHO</option>
+                                </select>
+                            </div>
+
+                            <!-- Aquí debe mostrar errores y validadiones  -->
+                            <div id="mensaje-error" class="alert alert-danger d-none"></div>
+
+                            <button type="submit" class="btn btn-compania w-100">Guardar tarea</button>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Lista de tareas (aquí se agregan las tarjetas) -->
+    <section class="container mb-5">
+        <h2 class="h4">Mis tareas</h2>
+        <div id="lista-tareas" class="row g-3"></div>
+    </section>
+
+    <!-- Footer se debe modificar a modular-->
+    <footer class="footer-compania">
+        <div class="container text-center">
+            <strong>Derechos reservados 2026 Carolayn Mora</strong><br>
+            <a href="mailto:juensiayala990@gmail.com">juensiayala990@gmail.com</a>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>

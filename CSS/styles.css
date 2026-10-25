@@ -1,7 +1,94 @@
-﻿:root{
-
+﻿/* ===== Colores (paleta) ===== (Pendiente escoger o arreglar paleta de colores ref. calculadora log.3)*/ 
+:root {
+    --lila-claro: #E8D0F2;
+    --morado: #5B38A6;
+    --morado-oscuro: #372773;
+    --azul-noche: #1C1B40;
+    --casi-negro: #131326;
 }
 
+/* ===== Estilos generales ===== */
 body {
+    background-color: var(--lila-claro);
+    color: var(--casi-negro);
+}
 
+h1, h2, h3 {
+    color: var(--morado-oscuro);
+}
+
+/* ===== Navbar ===== */
+.navbar-compania {
+    background-color: var(--azul-noche);
+}
+
+.navbar-compania .navbar-brand {
+    color: var(--lila-claro);
+}
+
+/* ===== Botones (reemplaza el azul por defecto de Bootstrap) ===== */
+.btn-compania {
+    background-color: var(--morado);
+    color: white;
+    border: none;
+}
+
+.btn-compania:hover {
+    background-color: var(--morado-oscuro);
+    color: white;
+}
+
+/* ===== Imagen ===== */
+.img-redondeada {
+    border-radius: 20px;
+    max-height: 450px;
+    object-fit: cover;
+}
+
+/* ===== Tarjetas ===== */
+.card {
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+/* Tarjeta oscura (formulario y tarjetas de tareas) */
+.tarjeta-oscura {
+    background-color: var(--azul-noche);
+    color: var(--lila-claro);
+    border: none;
+    border-radius: 15px;
+}
+
+.tarjeta-oscura .card-header {
+    background-color: var(--morado);
+}
+
+.tarjeta-oscura .form-control,
+.tarjeta-oscura .form-select {
+    background-color: var(--casi-negro);
+    color: white;
+    border-color: var(--morado);
+    color-scheme: dark; /* el icono del calendario se ve claro */
+}
+
+.tarjeta-oscura .form-control::placeholder {
+    color: #9d8bc4;
+}
+
+.tarjeta-oscura .form-control:focus,
+.tarjeta-oscura .form-select:focus {
+    border-color: var(--lila-claro);
+    box-shadow: 0 0 0 0.2rem rgba(232, 208, 242, 0.25);
+}
+
+/* ===== Footer ===== */
+.footer-compania {
+    background-color: var(--casi-negro);
+    color: var(--lila-claro);
+    padding: 30px 0;
+}
+
+.footer-compania a {
+    color: var(--lila-claro);
 }
